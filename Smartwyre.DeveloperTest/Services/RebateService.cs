@@ -41,6 +41,10 @@ public class RebateService : IRebateService
 
         _rebateDataStore.StoreCalculationResult(rebate, rebateAmount);
 
-        return new CalculateRebateResult { Success = true };
+        return new CalculateRebateResult 
+        { 
+            Success = true,
+            RebateAmount = rebateAmount
+        };
     }
 }
