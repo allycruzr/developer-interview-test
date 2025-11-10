@@ -25,10 +25,30 @@ class Program
         var productIdentifier = Console.ReadLine() ?? string.Empty;
 
         Console.Write("Enter Volume: ");
-        if (!decimal.TryParse(Console.ReadLine(), out var volume) || volume < 0)
+        decimal volume;
+        string? volumeInput;
+        while (true)
         {
-            Console.WriteLine("Invalid volume. Using 0.");
-            volume = 0;
+            volumeInput = Console.ReadLine();
+            if (string.IsNullOrWhiteSpace(volumeInput))
+            {
+                Console.Write("Volume cannot be empty. Please enter a valid decimal number (>= 0): ");
+                continue;
+            }
+
+            if (!decimal.TryParse(volumeInput, out volume))
+            {
+                Console.Write("Invalid format. Please enter a valid decimal number (>= 0): ");
+                continue;
+            }
+
+            if (volume < 0)
+            {
+                Console.Write("Volume cannot be negative. Please enter a number >= 0: ");
+                continue;
+            }
+
+            break;
         }
 
         var request = new CalculateRebateRequest
