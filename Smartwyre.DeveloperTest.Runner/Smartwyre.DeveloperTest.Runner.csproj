@@ -2,7 +2,14 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-	<TargetFramework>net8.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>5</WarningLevel>
   </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Smartwyre.DeveloperTest\Smartwyre.DeveloperTest.csproj" />
+  </ItemGroup>
 
 </Project>
