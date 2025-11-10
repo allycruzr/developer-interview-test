@@ -43,4 +43,50 @@ You are free to use any frameworks/NuGet packages that you see fit. You should p
 
 Feel free to use code comments to describe your changes. You are also welcome to update this readme with any important details for us to consider.
 
+## Running the Application
+
+The `Smartwyre.DeveloperTest.Runner` console application demonstrates the refactored `RebateService` in action.
+
+### How to Run
+
+```bash
+dotnet run --project Smartwyre.DeveloperTest.Runner
+```
+
+### Demo Mode
+
+**Note:** The Data Stores (`RebateDataStore` and `ProductDataStore`) are stubs that simulate database access using in-memory test data. In a production environment, these would connect to an actual database.
+
+### Usage
+
+When prompted, enter:
+
+1. **Rebate Identifier** - Use one of the demo identifiers:
+   - `rebate1` or `fixed-cash` → FixedCashAmount (fixed amount: $100)
+   - `rebate2` or `fixed-rate` → FixedRateRebate (15% of price × volume)
+   - `rebate3` or `amount-per-uom` → AmountPerUom ($5 per unit × volume)
+
+2. **Product Identifier** - Any value (e.g., `product1`)
+
+3. **Volume** - A decimal number (e.g., `10`)
+
+### Example
+
+```
+Enter Rebate Identifier: rebate1
+Enter Product Identifier: product1
+Enter Volume: 10
+
+✓ Rebate calculation successful!
+  Calculated Rebate Amount: $100.00
+```
+
+### Testing Different Scenarios
+
+- **FixedCashAmount**: Use `rebate1` with any product and volume
+- **FixedRateRebate**: Use `rebate2` with volume > 0 (calculates: price × percentage × volume)
+- **AmountPerUom**: Use `rebate3` with volume > 0 (calculates: amount × volume)
+
+Entering an invalid rebate identifier will result in a "not found" error.
+
 Once you have completed the exercise either ensure your repository is available publicly or contact the hiring manager to set up a private share.
