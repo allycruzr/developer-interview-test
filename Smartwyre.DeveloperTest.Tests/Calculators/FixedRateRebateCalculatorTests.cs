@@ -28,7 +28,7 @@ public class FixedRateRebateCalculatorTests
 
         var product = new Product
         {
-            Identifier = "PRODUCT1",
+            Identifier = "product1",
             Price = 50m,
             Uom = "kg",
             SupportedIncentives = SupportedIncentiveType.FixedRateRebate
@@ -55,7 +55,7 @@ public class FixedRateRebateCalculatorTests
         Rebate? rebate = null;
         var product = new Product
         {
-            Identifier = "PRODUCT1",
+            Identifier = "product1",
             Price = 50m,
             Uom = "kg",
             SupportedIncentives = SupportedIncentiveType.FixedRateRebate
@@ -117,7 +117,7 @@ public class FixedRateRebateCalculatorTests
 
         var product = new Product
         {
-            Identifier = "PRODUCT1",
+            Identifier = "product1",
             Price = 50m,
             Uom = "kg",
             SupportedIncentives = SupportedIncentiveType.FixedCashAmount
@@ -151,7 +151,7 @@ public class FixedRateRebateCalculatorTests
 
         var product = new Product
         {
-            Identifier = "PRODUCT1",
+            Identifier = "product1",
             Price = 50m,
             Uom = "kg",
             SupportedIncentives = SupportedIncentiveType.FixedRateRebate
@@ -185,7 +185,7 @@ public class FixedRateRebateCalculatorTests
 
         var product = new Product
         {
-            Identifier = "PRODUCT1",
+            Identifier = "product1",
             Price = 0m,
             Uom = "kg",
             SupportedIncentives = SupportedIncentiveType.FixedRateRebate
@@ -219,7 +219,7 @@ public class FixedRateRebateCalculatorTests
 
         var product = new Product
         {
-            Identifier = "PRODUCT1",
+            Identifier = "product1",
             Price = 50m,
             Uom = "kg",
             SupportedIncentives = SupportedIncentiveType.FixedRateRebate
@@ -253,7 +253,7 @@ public class FixedRateRebateCalculatorTests
 
         var product = new Product
         {
-            Identifier = "PRODUCT1",
+            Identifier = "product1",
             Price = 100m,
             Uom = "kg",
             SupportedIncentives = SupportedIncentiveType.FixedRateRebate
@@ -284,7 +284,7 @@ public class FixedRateRebateCalculatorTests
 
         var product2 = new Product
         {
-            Identifier = "PRODUCT1",
+            Identifier = "product1",
             Price = 50m,
             Uom = "kg",
             SupportedIncentives = SupportedIncentiveType.FixedRateRebate

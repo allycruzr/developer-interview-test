@@ -28,7 +28,7 @@ public class FixedCashAmountCalculatorTests
 
         var product = new Product
         {
-            Identifier = "PRODUCT1",
+            Identifier = "product1",
             Price = 50m,
             Uom = "kg",
             SupportedIncentives = SupportedIncentiveType.FixedCashAmount
@@ -55,7 +55,7 @@ public class FixedCashAmountCalculatorTests
         Rebate? rebate = null;
         var product = new Product
         {
-            Identifier = "PRODUCT1",
+            Identifier = "product1",
             Price = 50m,
             Uom = "kg",
             SupportedIncentives = SupportedIncentiveType.FixedCashAmount
@@ -117,7 +117,7 @@ public class FixedCashAmountCalculatorTests
 
         var product = new Product
         {
-            Identifier = "PRODUCT1",
+            Identifier = "product1",
             Price = 50m,
             Uom = "kg",
             SupportedIncentives = SupportedIncentiveType.FixedRateRebate
@@ -151,7 +151,7 @@ public class FixedCashAmountCalculatorTests
 
         var product = new Product
         {
-            Identifier = "PRODUCT1",
+            Identifier = "product1",
             Price = 50m,
             Uom = "kg",
             SupportedIncentives = SupportedIncentiveType.FixedCashAmount
@@ -185,7 +185,7 @@ public class FixedCashAmountCalculatorTests
 
         var product = new Product
         {
-            Identifier = "PRODUCT1",
+            Identifier = "product1",
             Price = 50m,
             Uom = "kg",
             SupportedIncentives = SupportedIncentiveType.FixedCashAmount

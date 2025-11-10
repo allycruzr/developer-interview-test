@@ -28,7 +28,7 @@ public class AmountPerUomCalculatorTests
 
         var product = new Product
         {
-            Identifier = "PRODUCT1",
+            Identifier = "product1",
             Price = 50m,
             Uom = "kg",
             SupportedIncentives = SupportedIncentiveType.AmountPerUom
@@ -55,7 +55,7 @@ public class AmountPerUomCalculatorTests
         Rebate? rebate = null;
         var product = new Product
         {
-            Identifier = "PRODUCT1",
+            Identifier = "product1",
             Price = 50m,
             Uom = "kg",
             SupportedIncentives = SupportedIncentiveType.AmountPerUom
@@ -117,7 +117,7 @@ public class AmountPerUomCalculatorTests
 
         var product = new Product
         {
-            Identifier = "PRODUCT1",
+            Identifier = "product1",
             Price = 50m,
             Uom = "kg",
             SupportedIncentives = SupportedIncentiveType.FixedCashAmount
@@ -151,7 +151,7 @@ public class AmountPerUomCalculatorTests
 
         var product = new Product
         {
-            Identifier = "PRODUCT1",
+            Identifier = "product1",
             Price = 50m,
             Uom = "kg",
             SupportedIncentives = SupportedIncentiveType.AmountPerUom
@@ -185,7 +185,7 @@ public class AmountPerUomCalculatorTests
 
         var product = new Product
         {
-            Identifier = "PRODUCT1",
+            Identifier = "product1",
             Price = 50m,
             Uom = "kg",
             SupportedIncentives = SupportedIncentiveType.AmountPerUom
@@ -219,7 +219,7 @@ public class AmountPerUomCalculatorTests
 
         var product = new Product
         {
-            Identifier = "PRODUCT1",
+            Identifier = "product1",
             Price = 50m,
             Uom = "kg",
             SupportedIncentives = SupportedIncentiveType.AmountPerUom
@@ -250,7 +250,7 @@ public class AmountPerUomCalculatorTests
 
         var product2 = new Product
         {
-            Identifier = "PRODUCT1",
+            Identifier = "product1",
             Price = 50m,
             Uom = "kg",
             SupportedIncentives = SupportedIncentiveType.AmountPerUom
