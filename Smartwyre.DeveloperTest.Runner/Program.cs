@@ -25,7 +25,7 @@ class Program
         var productIdentifier = Console.ReadLine() ?? string.Empty;
 
         Console.Write("Enter Volume: ");
-        if (!decimal.TryParse(Console.ReadLine(), out var volume))
+        if (!decimal.TryParse(Console.ReadLine(), out var volume) || volume < 0)
         {
             Console.WriteLine("Invalid volume. Using 0.");
             volume = 0;
@@ -41,7 +41,20 @@ class Program
         Console.WriteLine();
         Console.WriteLine("Calculating rebate...");
 
-        var result = rebateService.Calculate(request);
+        CalculateRebateResult result;
+        try
+        {
+            result = rebateService.Calculate(request);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine();
+            Console.WriteLine($"✗ Error: {ex.Message}");
+            Console.WriteLine();
+            Console.WriteLine("Press any key to exit...");
+            Console.ReadKey();
+            return;
+        }
 
         Console.WriteLine();
         if (result.Success)
@@ -56,11 +69,10 @@ class Program
         else
         {
             Console.WriteLine("✗ Rebate calculation failed.");
-            Console.WriteLine();
-            Console.WriteLine("Possible reasons:");
-            Console.WriteLine("  - Rebate or Product not found");
-            Console.WriteLine("  - Product does not support the incentive type");
-            Console.WriteLine("  - Invalid data (zero values, etc.)");
+            if (!string.IsNullOrWhiteSpace(result.ErrorMessage))
+            {
+                Console.WriteLine($"Reason: {result.ErrorMessage}");
+            }
         }
 
         Console.WriteLine();

@@ -25,16 +25,33 @@ public class RebateService : IRebateService
         var rebate = _rebateDataStore.GetRebate(request.RebateIdentifier);
         var product = _productDataStore.GetProduct(request.ProductIdentifier);
 
-        if (rebate == null || product == null)
+        if (rebate == null)
         {
-            return new CalculateRebateResult { Success = false };
+            return new CalculateRebateResult 
+            { 
+                Success = false,
+                ErrorMessage = "Rebate not found"
+            };
+        }
+
+        if (product == null)
+        {
+            return new CalculateRebateResult 
+            { 
+                Success = false,
+                ErrorMessage = "Product not found"
+            };
         }
 
         var calculator = _calculatorFactory.Create(rebate.Incentive);
 
         if (!calculator.CanCalculate(rebate, product, request))
         {
-            return new CalculateRebateResult { Success = false };
+            return new CalculateRebateResult 
+            { 
+                Success = false,
+                ErrorMessage = "Product does not support this incentive type or invalid data provided"
+            };
         }
 
         var rebateAmount = calculator.Calculate(rebate, product, request);
